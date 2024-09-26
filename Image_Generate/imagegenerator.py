@@ -10,7 +10,7 @@ def createimage(prompt):
 
     if response.status_code == 200:
         image = Image.open(BytesIO(response.content))
-        image.save('created_image.png')
+        image.save('gen_image.png')
     else:
         print(f"failed to retrive image. status {response.status_code}")
 
